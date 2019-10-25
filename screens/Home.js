@@ -18,6 +18,12 @@ class Home extends React.Component {
             <Card item={articles[2]} />
           </Block>  
         </Block>
+        <Block flex> 
+          <Block flex row>
+            <Card item={articles[1]} style={{ marginRight: theme.SIZES.BASE }} />
+            <Card item={articles[2]} />
+          </Block>  
+        </Block>
       </ScrollView>
     )
   }

@@ -106,6 +106,20 @@ const ArticlesStack = createStackNavigator({
   transitionConfig
 });
 
+const LibraryStack = createStackNavigator({
+  Library: {
+    screen: Library,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="Library" navigation={navigation} />
+    })
+  }
+},{
+  cardStyle: {
+    backgroundColor: "#F8F9FE"
+  },
+  transitionConfig
+});
+
 const ProfileStack = createStackNavigator(
   {
     Profile: {
@@ -123,23 +137,7 @@ const ProfileStack = createStackNavigator(
     transitionConfig
   }
 );
-const LibraryStack = createStackNavigator(
-  {
-    Library: {
-      screen: Library,
-      navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header white transparent title="Library" iconColor={'#FFF'} navigation={navigation} />
-        ),
-        headerTransparent: true
-      })
-    }
-  },
-  {
-    cardStyle: { backgroundColor: "#FFFFFF" },
-    transitionConfig
-  }
-);
+
 
 const HomeStack = createStackNavigator(
   {
@@ -187,7 +185,7 @@ const AppStack = createDrawerNavigator(
       screen: LibraryStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Library" />
+          <DrawerItem focused={focused} screen="Library" title="Library" />
         )
       })
     },

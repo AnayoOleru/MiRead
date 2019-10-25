@@ -4,6 +4,7 @@ import {
   ImageBackground,
   Dimensions,
   StatusBar,
+  ScrollView,
   KeyboardAvoidingView
 } from "react-native";
 import { Block, Checkbox, Text, theme } from "galio-framework";
@@ -16,14 +17,16 @@ const { width, height } = Dimensions.get("screen");
 class Register extends React.Component {
   render() {
     return (
+      
       <Block flex middle>
         <StatusBar hidden />
         <ImageBackground
           source={Images.RegisterBackground}
           style={{ width, height, zIndex: 1 }}
         >
-          <Block flex middle>
-            <Block style={styles.registerContainer}>
+        <Block flex middle>
+          <Block style={styles.registerContainer}>
+           <ScrollView>   
               <Block flex={0.25} middle style={styles.socialConnect}>
                 <Text color="#8898AA" size={12}>
                   Sign up with
@@ -32,13 +35,13 @@ class Register extends React.Component {
                   <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
                     <Block row>
                       <Icon
-                        name="logo-github"
+                        name="logo-facebook"
                         family="Ionicon"
                         size={14}
                         color={"black"}
                         style={{ marginTop: 2, marginRight: 5 }}
                       />
-                      <Text style={styles.socialTextButtons}>GITHUB</Text>
+                      <Text style={styles.socialTextButtons}>Facebook</Text>
                     </Block>
                   </Button>
                   <Button style={styles.socialButtons}>
@@ -55,7 +58,9 @@ class Register extends React.Component {
                   </Button>
                 </Block>
               </Block>
+              
               <Block flex>
+                
                 <Block flex={0.17} middle>
                   <Text color="#8898AA" size={12}>
                     Or sign up the classic way
@@ -96,6 +101,19 @@ class Register extends React.Component {
                           />
                         }
                       />
+                      <Input
+                        borderless
+                        placeholder="Phone NUmber"
+                        iconContent={
+                          <Icon
+                            size={16}
+                            color={argonTheme.COLORS.ICON}
+                            name="ic_mail_24px"
+                            family="ArgonExtra"
+                            style={styles.inputIcons}
+                          />
+                        }
+                      />
                     </Block>
                     <Block width={width * 0.8}>
                       <Input
@@ -112,6 +130,21 @@ class Register extends React.Component {
                           />
                         }
                       />
+                      <Input
+                        password
+                        borderless
+                        placeholder="Confirm Password"
+                        iconContent={
+                          <Icon
+                            size={16}
+                            color={argonTheme.COLORS.ICON}
+                            name="padlock-unlocked"
+                            family="ArgonExtra"
+                            style={styles.inputIcons}
+                          />
+                        }
+                      />
+                      
                       <Block row style={styles.passwordCheck}>
                         <Text size={12} color={argonTheme.COLORS.MUTED}>
                           password strength:
@@ -150,11 +183,15 @@ class Register extends React.Component {
                     </Block>
                   </KeyboardAvoidingView>
                 </Block>
+                
               </Block>
+              </ScrollView>
             </Block>
+           
           </Block>
         </ImageBackground>
       </Block>
+      
     );
   }
 }
