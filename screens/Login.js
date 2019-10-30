@@ -14,7 +14,7 @@ import { Images, argonTheme } from "../constants";
 
 const { width, height } = Dimensions.get("screen");
 
-class Register extends React.Component {
+class Login extends React.Component {
   render() {
     return (
       
@@ -24,12 +24,12 @@ class Register extends React.Component {
           source={Images.RegisterBackground}
           style={{ width, height, zIndex: 1 }}
         >
-        <Block flex middle>
+        <Block flex middle >
           <Block style={styles.registerContainer}>
            <ScrollView>   
               <Block flex={0.25} middle style={styles.socialConnect}>
                 <Text color="#8898AA" size={12}>
-                  Sign up with
+                  Sign in with
                 </Text>
                 <Block row style={{ marginTop: theme.SIZES.BASE }}>
                   <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
@@ -58,12 +58,11 @@ class Register extends React.Component {
                   </Button>
                 </Block>
               </Block>
-              
+
               <Block flex>
-                
                 <Block flex={0.17} middle>
                   <Text color="#8898AA" size={12}>
-                    Or sign up the classic way
+                    Or sign in the classic way
                   </Text>
                 </Block>
                 <Block flex center>
@@ -72,21 +71,7 @@ class Register extends React.Component {
                     behavior="padding"
                     enabled
                   >
-                    <Block width={width * 0.8} style={{ marginBottom: 15 }}>
-                      <Input
-                        borderless
-                        placeholder="Name"
-                        iconContent={
-                          <Icon
-                            size={16}
-                            color={argonTheme.COLORS.ICON}
-                            name="hat-3"
-                            family="ArgonExtra"
-                            style={styles.inputIcons}
-                          />
-                        }
-                      />
-                    </Block>
+                    
                     <Block width={width * 0.8} style={{ marginBottom: 15 }}>
                       <Input
                         borderless
@@ -101,19 +86,7 @@ class Register extends React.Component {
                           />
                         }
                       />
-                      <Input
-                        borderless
-                        placeholder="Phone NUmber"
-                        iconContent={
-                          <Icon
-                            size={16}
-                            color={argonTheme.COLORS.ICON}
-                            name="ic_mail_24px"
-                            family="ArgonExtra"
-                            style={styles.inputIcons}
-                          />
-                        }
-                      />
+                     
                     </Block>
                     <Block width={width * 0.8}>
                       <Input
@@ -130,54 +103,16 @@ class Register extends React.Component {
                           />
                         }
                       />
-                      <Input
-                        password
-                        borderless
-                        placeholder="Confirm Password"
-                        iconContent={
-                          <Icon
-                            size={16}
-                            color={argonTheme.COLORS.ICON}
-                            name="padlock-unlocked"
-                            family="ArgonExtra"
-                            style={styles.inputIcons}
-                          />
-                        }
-                      />
-                      
-                      <Block row style={styles.passwordCheck}>
-                        <Text size={12} color={argonTheme.COLORS.MUTED}>
-                          password strength:
-                        </Text>
-                        <Text bold size={12} color={argonTheme.COLORS.SUCCESS}>
-                          {" "}
-                          strong
-                        </Text>
-                      </Block>
                     </Block>
-                    <Block row width={width * 0.75}>
-                      <Checkbox
-                        checkboxStyle={{
-                          borderWidth: 3
-                        }}
-                        color={argonTheme.COLORS.PRIMARY}
-                        label="I agree with the"
-                      />
-                      <Button
-                        style={{ width: 100 }}
-                        color="transparent"
-                        textStyle={{
-                          color: argonTheme.COLORS.PRIMARY,
-                          fontSize: 14
-                        }}
-                      >
-                        Privacy Policy
-                      </Button>
-                    </Block>
-                    <Block middle>
+                    <Block row>
                       <Button color="primary" style={styles.createButton}>
                         <Text bold size={14} color={argonTheme.COLORS.WHITE}>
-                          CREATE ACCOUNT
+                          Log in
+                        </Text>
+                      </Button>
+                      <Button color="primary" style={styles.createButton}>
+                        <Text bold size={14} color={argonTheme.COLORS.WHITE}>
+                          Sign Up
                         </Text>
                       </Button>
                     </Block>
@@ -199,7 +134,7 @@ class Register extends React.Component {
 const styles = StyleSheet.create({
   registerContainer: {
     width: width * 0.9,
-    height: height * 0.8,
+    height: height * 0.4,
     backgroundColor: "#F4F5F7",
     borderRadius: 4,
     shadowColor: argonTheme.COLORS.BLACK,
@@ -215,7 +150,7 @@ const styles = StyleSheet.create({
   socialConnect: {
     backgroundColor: argonTheme.COLORS.WHITE,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "#8898AA"
+    borderColor: "#8898AA",
   },
   socialButtons: {
     width: 120,
@@ -244,9 +179,10 @@ const styles = StyleSheet.create({
     paddingBottom: 30
   },
   createButton: {
-    width: width * 0.5,
-    marginTop: 25
+    width: width * 0.4,
+    marginTop: 25,
+    marginRight: 2
   }
 });
 
-export default Register;
+export default Login;

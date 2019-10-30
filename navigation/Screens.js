@@ -18,6 +18,8 @@ import Elements from "../screens/Elements";
 import Articles from "../screens/Articles";
 import Categ from "../screens/Categ";
 import Library from "../screens/Library";
+import Uploads from "../screens/Uploads";
+import Login from "../screens/Login";
 
 // drawer
 import Menu from "./Menu";
@@ -120,6 +122,20 @@ const LibraryStack = createStackNavigator({
   transitionConfig
 });
 
+const UploadsStack = createStackNavigator({
+  Uploads: {
+    screen: Uploads,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="My Uploads" navigation={navigation} />
+    })
+  }
+},{
+  cardStyle: {
+    backgroundColor: "#F8F9FE"
+  },
+  transitionConfig
+});
+
 const ProfileStack = createStackNavigator(
   {
     Profile: {
@@ -189,6 +205,14 @@ const AppStack = createDrawerNavigator(
         )
       })
     },
+    Uploads: {
+      screen: UploadsStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Uploads" title="Uploads" />
+        )
+      })
+    },
     Profile: {
       screen: ProfileStack,
       navigationOptions: navOpt => ({
@@ -202,6 +226,14 @@ const AppStack = createDrawerNavigator(
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
           <DrawerItem focused={focused} screen="Register" title="Account" />
+        )
+      })
+    },
+    Login: {
+      screen: Login,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Login" title="Login" />
         )
       })
     },
