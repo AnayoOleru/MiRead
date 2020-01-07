@@ -1,7 +1,7 @@
 {
   "name": "argon-react-native",
   "version": "1.2.0",
-  "description": "Argon React Native, based on Argon Design System. Coded by Creative Tim",
+  "description": "MiRead, is your Library on the go! Developed by Anayo Oleru",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/argon-react-native.git"
+    "url": "git+https://github.com/AnayoOleru/MiRead.git "
   },
   "dependencies": {
     "expo": "^34.0.3",
@@ -28,28 +28,10 @@
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
   },
-  "keywords": [
-    "argon react native",
-    "argon design system",
-    "argon app react native",
-    "argon iOS",
-    "react native iOS",
-    "creative tim",
-    "argon Android",
-    "react native ui kit",
-    "react native expo",
-    "freebie",
-    "react native argon design",
-    "react native galio",
-    "galio argon free",
-    "galio react native free app",
-    "argon expo react native",
-    "react native ui template"
-  ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "keywords": ["MiRead", "AnayoOleru", "react native ui template"],
+  "author": "Anayo Oleru",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/argon-react-native/issues"
-  },
-  "homepage": "https://demos.creative-tim.com/argon-react-native"
+    "url": "https://github.com/AnayoOleru/MiRead.git/issues"
+  }
 }
