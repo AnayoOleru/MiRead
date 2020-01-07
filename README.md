@@ -60,16 +60,14 @@ argon-react-native/
 
 - Copyright 2020 Anayo Oleru
 
-- Licensed under MIT (https://github.com/creativetimofficial/argon-react-native/blob/master/LICENSE.md)
+- Licensed under MIT (https://github.com/AnayoOleru/MiRead/blob/develop/LICENSE.md)
 
 
 ### Social Media
 
-Twitter: <https://twitter.com/CreativeTim>
+Twitter: <https://twitter.com/AnayoOleru>
 
-Facebook: <https://www.facebook.com/CreativeTim>
+Facebook: <https://www.facebook.com/AnayoOleru>
 
-Dribbble: <https://dribbble.com/creativetim>
-
-Instagram: <https://www.instagram.com/CreativeTimOfficial>
+Instagram: <https://www.instagram.com/anayo.oleru>
 
