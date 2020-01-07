@@ -1,4 +1,4 @@
-# [MiRead](https://creativetimofficial.github.io/argon-react-native/docs/#) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Argon%20React%20Native,%20a%20cool%20Argon%20React%20Native%20App%20Template%20%E2%9D%A4%EF%B8%8F%20https%3A//bit.ly/2KAj86H%20%23reactnative%20%23argon%20%23designsystem%20%23developers%20via%20%40CreativeTim)
+# MiRead
 
 MiRead is your Library on the go! Packed with fun and entertaining eBooks, MiRead gives users 24/7 access to get the latest e-books in different categories without downloading, anytime and anywhere.
 
@@ -51,7 +51,8 @@ argon-react-native/
 
 ## OS Support
 
-[<img src="https://raw.githubusercontent.com/creativetimofficial/ct-material-kit-pro-react-native/master/assets/android-logo.png" width="60" height="60" />](https://www.creative-tim.com/product/material-kit-pro-react-native)[<img src="https://raw.githubusercontent.com/creativetimofficial/ct-material-kit-pro-react-native/master/assets/apple-logo.png" width="60" height="60" />](https://www.creative-tim.com/product/material-kit-pro-react-native)
+### Android
+### IOS
 
 
 
