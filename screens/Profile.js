@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   },
   profileBackground: {
     width: width,
-    height: height / 2
+    height: height
   },
   profileCard: {
     // position: "relative",

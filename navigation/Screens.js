@@ -14,11 +14,6 @@ import Onboarding from "../screens/Onboarding";
 import Pro from "../screens/Pro";
 import Profile from "../screens/Profile";
 import Register from "../screens/Register";
-import Elements from "../screens/Elements";
-import Articles from "../screens/Articles";
-import Categ from "../screens/Categ";
-import Library from "../screens/Library";
-import Uploads from "../screens/Uploads";
 import Login from "../screens/Login";
 import Recent from "../screens/Recent";
 import Search from "../screens/Search";
@@ -74,34 +69,6 @@ const transitionConfig = (transitionProps, prevTransitionProps) => ({
   }
 });
 
-const ElementsStack = createStackNavigator({
-  Elements: {
-    screen: Elements,
-    navigationOptions: ({ navigation }) => ({
-      header: <Header title="Elements" navigation={navigation} />
-    })
-  }
-},{
-  cardStyle: {
-    backgroundColor: "#F8F9FE"
-  },
-  transitionConfig
-});
-
-const CategStack = createStackNavigator({
-  Categ: {
-    screen: Categ,
-    navigationOptions: ({ navigation }) => ({
-      header: <Header title="Categ" navigation={navigation} />
-    })
-  }
-},{
-  cardStyle: {
-    backgroundColor: "#F8F9FE"
-  },
-  transitionConfig
-});
-
 const FindBooksStack = createStackNavigator({
   FindBooks: {
     screen: FindBooks,
@@ -132,34 +99,6 @@ const AboutUsStack = createStackNavigator({
   transitionConfig
 })
 
-const AccountStack = createStackNavigator({
-  Categ: {
-    screen: Categ,
-    navigationOptions: ({ navigation }) => ({
-      header: <Header title="Categ" navigation={navigation} />
-    })
-  }
-},{
-  cardStyle: {
-    backgroundColor: "#F8F9FE"
-  },
-  transitionConfig
-});
-
-const LibraryStack = createStackNavigator({
-  Library: {
-    screen: Library,
-    navigationOptions: ({ navigation }) => ({
-      header: <Header title="Library" navigation={navigation} />
-    })
-  }
-},{
-  cardStyle: {
-    backgroundColor: "#F8F9FE"
-  },
-  transitionConfig
-});
-
 const EventStack = createStackNavigator({
   Events: {
     screen: Events,
@@ -178,20 +117,6 @@ const MyLibraryStack = createStackNavigator({
     })
   }
 })
-
-const UploadsStack = createStackNavigator({
-  Uploads: {
-    screen: Uploads,
-    navigationOptions: ({ navigation }) => ({
-      header: <Header title="My Uploads" navigation={navigation} />
-    })
-  }
-},{
-  cardStyle: {
-    backgroundColor: "#F8F9FE"
-  },
-  transitionConfig
-});
 
 const ProfileStack = createStackNavigator(
   {
