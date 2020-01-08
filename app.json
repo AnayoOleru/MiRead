@@ -10,7 +10,6 @@
     ],
     "version": "1.2.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/imgs/SplashScreen.png",
       "resizeMode": "cover",

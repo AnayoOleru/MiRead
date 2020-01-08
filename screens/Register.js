@@ -78,8 +78,8 @@ class Register extends React.Component {
                           <Icon
                             size={16}
                             color={Theme.COLORS.ICON}
-                            name="ic_mail_24px"
-                            family="ArgonExtra"
+                            name="phone"
+                            family="Entypo"
                             style={styles.inputIcons}
                           />
                         }

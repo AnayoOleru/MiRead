@@ -33,7 +33,7 @@ class ContactUS extends React.Component {
                 
                 <Block flex={0.17} middle>
                   <Text color="#8898AA" size={20}>
-                    Like What you see, don't send me a message through the form below
+                    Like What you see, contact me through my email below
                   </Text>
                 </Block>
                 <Block flex center>
@@ -73,13 +73,13 @@ class ContactUS extends React.Component {
                       />
                       <Input
                         borderless
-                        placeholder="Phone NUmber"
+                        placeholder="Phone Number"
                         iconContent={
                           <Icon
                             size={16}
                             color={Theme.COLORS.ICON}
-                            name="ic_mail_24px"
-                            family="ArgonExtra"
+                            name="phone"
+                            family="Entypo"
                             style={styles.inputIcons}
                           />
                         }
@@ -103,7 +103,7 @@ class ContactUS extends React.Component {
                       <Block row style={styles.passwordCheck}>
                         {/* <Block row style={styles.passwordCheck}> */}
                         <Text size={12} color={Theme.COLORS.MUTED}>
-                          Instead contact me:
+                          Contact me:
                         </Text>
                         <Text bold size={12} color={Theme.COLORS.MiREADCOLOR}>
                           {" "}
