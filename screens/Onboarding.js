@@ -10,7 +10,7 @@ import { Block, Button, Text, theme } from "galio-framework";
 
 const { height, width } = Dimensions.get("screen");
 
-import argonTheme from "../constants/Theme";
+import Theme from "../constants/Theme";
 import Images from "../constants/Images";
 
 class Onboarding extends React.Component {
@@ -22,38 +22,40 @@ class Onboarding extends React.Component {
         <StatusBar hidden />
         <Block flex center>
         <ImageBackground
-            source={Images.Onboarding}
+            source={Images.background}
             style={{ height, width, zIndex: 1 }}
           />
         </Block>
         <Block center>
-          <Image source={Images.LogoOnboarding} style={styles.logo} />
+          {/* <Image source={Images.mireadLogo} style={styles.logo} /> */}
+          {/* <Text color="white" style={styles.logo}size={20}>MiREAD</Text> */}
+         
         </Block>
         <Block flex space="between" style={styles.padded}>
             <Block flex space="around" style={{ zIndex: 2 }}>
               <Block style={styles.title}>
                 <Block>
                   <Text color="white" size={60}>
-                    Design
+                    24/7
                   </Text>
                 </Block>
                 <Block>
                   <Text color="white" size={60}>
-                    System
+                    Free Access
                   </Text>
                 </Block>
                 <Block style={styles.subTitle}>
                   <Text color="white" size={16}>
-                    Fully coded React Native components.
+                  Packed with fun and entertaining eBooks
                   </Text>
                 </Block>
               </Block>
               <Block center>
                 <Button
                   style={styles.button}
-                  color={argonTheme.COLORS.SECONDARY}
-                  onPress={() => navigation.navigate("Home")}
-                  textStyle={{ color: argonTheme.COLORS.BLACK }}
+                  color={Theme.COLORS.SECONDARY}
+                  onPress={() => navigation.navigate("Account")}
+                  textStyle={{ color: Theme.COLORS.BLACK }}
                 >
                   Get Started
                 </Button>

@@ -1,14 +1,15 @@
 import React from "react";
-import { ScrollView, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
+import { ScrollView, StyleSheet, Dimensions, TouchableOpacity, FlatList } from "react-native";
 // Galio components
 import { Block, Text, Button as GaButton, theme } from "galio-framework";
 // Argon themed components
 import { Theme, tabs } from "../constants/";
 import { Button, Select, Icon, Input, Header, Switch } from "../components/";
+import Categories from '../constants/categories';
 
 const { width } = Dimensions.get("screen");
 
-class Categ extends React.Component {
+class FindBooks extends React.Component {
   state = {
     "switch-1": true,
     "switch-2": false
@@ -24,39 +25,17 @@ class Categ extends React.Component {
           Categories
         </Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Block center>
-            <Button color="default" style={styles.button}>
-              Math
-            </Button>
-          </Block>
-          <Block center>
-            <Button color="error" style={styles.button}>
-              Sciences
-            </Button>
-          </Block>
-          <Block center>
-            <Button style={styles.button}>Law and philosophy</Button>
-          </Block>
-          <Block center>
-            <Button color="info" style={styles.button}>
-              Literature
-            </Button>
-          </Block>
-          <Block center>
-            <Button color="success" style={styles.button}>
-              Languages
-            </Button>
-          </Block>
-          <Block center>
-            <Button color="warning" style={styles.button}>
-              History
-            </Button>
-          </Block>
-          <Block center>
-            <Button color="error" style={styles.button}>
-              Geography
-            </Button>
-          </Block>
+        <FlatList
+            data={Categories}
+            renderItem={({ item }) => (
+                <Block center>
+                <Button color="default" style={styles.button}>
+                  {item.cat}
+                </Button>
+              </Block>
+            )}
+            keyExtractor={item => item.id}
+        />
         </Block>
       </Block>
     );
@@ -133,4 +112,4 @@ class Categ extends React.Component {
   });
   
 
-export default Categ;
+export default FindBooks;

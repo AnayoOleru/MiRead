@@ -3,10 +3,10 @@ import { ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform } f
 import { Block, Button, Text, theme } from 'galio-framework';
 
 const { height, width } = Dimensions.get('screen');
-import { Images, Theme } from '../constants/';
+import { Images, Theme } from '../constants';
 import { HeaderHeight } from "../constants/utils";
 
-export default class Pro extends React.Component {
+export default class ThankYou extends React.Component {
   render() {
     const { navigation } = this.props;
 
@@ -20,15 +20,37 @@ export default class Pro extends React.Component {
           />
           <Block space="between" style={styles.padded}>
             <Block>
-              <Text size={16} color='rgba(255,255,255,0.6)' style={{ marginTop: 15 }}>
-              Currently there is no Notification
-              </Text>
+              <Block>
+                <Text>MiREAD</Text>
+              </Block>
+              <Block >
+                <Block>
+                  <Text color="white" size={60}>Thank You</Text>
+                </Block>
+                <Block>
+                  <Text color="white" size={60}>For contacting</Text>
+                </Block>
+                <Block row>
+                  <Text color="white" size={60}>ANAYO</Text>
+                  <Block middle style={styles.pro}>
+                    <Text size={16} color="white">Software Engineer</Text>
+                  </Block>
+                </Block>
+              </Block>
+              <Block row style={{ marginTop: theme.SIZES.BASE * 1.5, marginBottom: theme.SIZES.BASE * 4 }}>
+                <Image
+                  source={Images.iOSLogo}
+                  style={{ height: 38, width: 82, marginRight: theme.SIZES.BASE * 1.5 }} />
+                <Image
+                  source={Images.androidLogo}
+                  style={{ height: 38, width: 140 }} />
+              </Block>
               <Button
                 shadowless
                 style={styles.button}
                 color={Theme.COLORS.INFO}
                 onPress={() => navigation.navigate('Home')}>
-                <Text bold color={theme.COLORS.WHITE}>Go Back Home</Text>
+                <Text bold color={theme.COLORS.WHITE}>GO BACK HOME</Text>
               </Button>
             </Block>
           </Block>

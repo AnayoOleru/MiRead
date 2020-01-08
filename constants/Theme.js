@@ -7,6 +7,7 @@ export default {
     INFO: '#11CDEF',
     ERROR: '#F5365C',
     SUCCESS: '#2DCE89',
+    MiREADCOLOR: '#f88b11',
     WARNING: '#FB6340',
     /*not yet changed */
     MUTED: '#ADB5BD',
@@ -27,6 +28,17 @@ export default {
     HEADER: '#525F7F',
     BORDER: '#CAD1D7',
     WHITE: '#FFFFFF',
-    BLACK: '#000000'
+    BLACK: '#000000',
+    TWITTER: '#55acee',
+    DRIBBBLE: '#ea4c89',
+    FACEBOOK: '#3b5998',
+    LINKEDIN: '#0077B5',
+    PINTEREST: '#cc2127',
+    YOUTUBE: '#e52d27',
+    TUMBLR: '#35465c',
+    GITHUB: '#333333',
+    BEHANCE: '#1769ff',
+    REDDIT: '#ff4500',
+    GOOGLE: '#dd4b39'
   }
 };

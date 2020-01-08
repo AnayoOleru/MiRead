@@ -1,18 +1,19 @@
 import React from "react";
 import { StyleSheet, Dimensions, ScrollView, FlatList } from "react-native";
-import { Block, theme } from "galio-framework";
+import { Block, theme, Text } from "galio-framework";
 
 import { Card } from "../components";
 import articles from "../constants/articles";
 const { width } = Dimensions.get("screen");
 
-class Home extends React.Component {
+class MyLibrary extends React.Component {
   renderArticles = () => {
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.articles}
       >
+    <Text>Books Read</Text>
         <FlatList
           data={articles}
           renderItem={({ item }) => (
@@ -22,12 +23,14 @@ class Home extends React.Component {
                 bookImage={item.image}
                 bookTitle={item.title}
                 bookCTA={item.cta}
+                myLibrary="Remove"
                 style={{ marginRight: theme.SIZES.BASE }}
               />
                 <Card
                 bookImage={item.image}
                 bookTitle={item.title}
                 bookCTA={item.cta}
+                myLibrary="Remove"
                 // style={{ marginRight: theme.SIZES.BASE }}
               />
               {/* <Card item={articles[2]} /> */}
@@ -59,4 +62,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default MyLibrary;

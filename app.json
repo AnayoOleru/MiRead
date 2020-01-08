@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Argon FREE React Native",
-    "slug": "argon-free-react-native",
+    "name": "MiREAD",
+    "slug": "miread",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": [
@@ -12,7 +12,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/imgs/SplashScreen.png",
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
@@ -24,6 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   }
 }

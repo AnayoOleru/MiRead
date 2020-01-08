@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Dimensions, Image, TouchableWithoutFeedback } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
 
-import { argonTheme } from '../constants';
+import { Theme } from '../constants';
 
 
 class Card extends React.Component {
   render() {
-    const { navigation, item, horizontal, full, style, ctaColor, imageStyle } = this.props;
+    const { navigation, bookImage, bookTitle, bookCTA, horizontal, full, style, ctaColor, imageStyle, myLibrary } = this.props;
     
     const imageStyles = [
       full ? styles.fullImage : styles.horizontalImage,
@@ -25,13 +25,18 @@ class Card extends React.Component {
       <Block row={horizontal} card flex style={cardContainer}>
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro')}>
           <Block flex style={imgContainer}>
-            <Image source={{uri: item.image}} style={imageStyles} />
+            <Image source={{uri: bookImage}} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro')}>
+        <TouchableWithoutFeedback 
+        // onPress={() => navigation.navigate('Pro')}
+        >
           <Block flex space="between" style={styles.cardDescription}>
-            <Text size={14} style={styles.cardTitle}>{item.title}</Text>
-            <Text size={12} muted={!ctaColor} color={ctaColor || argonTheme.COLORS.ACTIVE} bold>{item.cta}</Text>
+            <Text size={14} style={styles.cardTitle}>{bookTitle}</Text>
+            <Text size={12} muted={!ctaColor} color={ctaColor || Theme.COLORS.ACTIVE} bold>{bookCTA}</Text>
+            {myLibrary ? (
+              <Text size={12} muted={!ctaColor} color={ctaColor || Theme.COLORS.ACTIVE} bold>{myLibrary}</Text>
+            ) : null }
           </Block>
         </TouchableWithoutFeedback>
       </Block>

@@ -6,7 +6,7 @@ import {
   Dimensions,
   Image
 } from "react-native";
-import { Block, theme } from "galio-framework";
+import { Block, theme, Text } from "galio-framework";
 
 import Images from "../constants/Images";
 
@@ -15,7 +15,8 @@ const { width } = Dimensions.get("screen");
 const Drawer = props => (
   <Block style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block flex={0.05} style={styles.header}>
-      <Image styles={styles.logo} source={Images.Logo} />
+      {/* <Image styles={styles.logo} source={Images.mireadLogo2} /> */}
+      <Text>MiREAD</Text>
     </Block>
     <Block flex>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>

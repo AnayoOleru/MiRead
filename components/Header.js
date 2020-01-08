@@ -7,7 +7,7 @@ import { Button, Block, NavBar, Text, theme } from 'galio-framework';
 import Icon from './Icon';
 import Input from './Input';
 import Tabs from './Tabs';
-import argonTheme from '../constants/Theme';
+import Theme from '../constants/Theme';
 
 
 const { height, width } = Dimensions.get('window');
@@ -19,7 +19,7 @@ const BellButton = ({isWhite, style, navigation}) => (
       family="ArgonExtra"
       size={16}
       name="bell"
-      color={argonTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
+      color={Theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
     <Block middle style={styles.notify} />
   </TouchableOpacity>
@@ -101,7 +101,7 @@ class Header extends React.Component {
         style={styles.search}
         placeholder="What are you looking for?"
         placeholderTextColor={'#8898AA'}
-        onFocus={() => navigation.navigate('Pro')}
+        onFocus={() => navigation.navigate('Search')}
         iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="search-zoom-in" family="ArgonExtra" />}
       />
     );
@@ -111,14 +111,14 @@ class Header extends React.Component {
 
     return (
       <Block row style={styles.options}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Home')}>
           <Block row middle>
             <Text size={20} style={styles.tabTitle}>{optionLeft || 'All Books'}</Text>
           </Block>
         </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Categ')}>
+        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Recent')}>
           <Block row middle>
-            <Text size={20} style={styles.tabTitle}>{optionRight || 'Categories'}</Text>
+            <Text size={20} style={styles.tabTitle}>{optionRight || 'Recent'}</Text>
           </Block>
         </Button>
       </Block>
@@ -176,12 +176,12 @@ class Header extends React.Component {
             <Icon 
               name={back ? 'nav-left' : "menu-8"} family="ArgonExtra" 
               size={14} onPress={this.handleLeftPress} 
-              color={iconColor || argonTheme.COLORS.ICON}/>
+              color={iconColor || Theme.COLORS.ICON}/>
           }
           leftStyle={{ paddingVertical: 12, flex: 0.2 }}
           titleStyle={[
             styles.title,
-            { color: argonTheme.COLORS[white ? 'WHITE' : 'HEADER'] },
+            { color: Theme.COLORS[white ? 'WHITE' : 'HEADER'] },
             titleColor && { color: titleColor }
           ]}
           {...props}
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   notify: {
-    backgroundColor: argonTheme.COLORS.LABEL,
+    backgroundColor: Theme.COLORS.LABEL,
     borderRadius: 4,
     height: theme.SIZES.BASE / 2,
     width: theme.SIZES.BASE / 2,
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     borderWidth: 1,
     borderRadius: 3,
-    borderColor: argonTheme.COLORS.BORDER
+    borderColor: Theme.COLORS.BORDER
   },
   options: {
     marginBottom: 24,
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   tabTitle: {
     lineHeight: 19,
     fontWeight: '400',
-    color: argonTheme.COLORS.HEADER
+    color: Theme.COLORS.HEADER
   },
 });
 

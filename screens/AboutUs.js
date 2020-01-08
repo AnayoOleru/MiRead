@@ -15,12 +15,13 @@ import { Button } from "../components";
 import { Images} from "../constants";
 import { HeaderHeight } from "../constants/utils";
 import User from '../constants/user';
+import AboutUS from "../constants/aboutUs";
 
 const { width, height } = Dimensions.get("screen");
 
 const thumbMeasure = (width - 48 - 32) / 3;
 
-class Profile extends React.Component {
+class AboutUs extends React.Component {
   render() {
     const { navigation} = this.props;
 
@@ -38,23 +39,13 @@ class Profile extends React.Component {
             >
 
             <FlatList
-            data={User}
+            data={AboutUS}
             renderItem={({ item }) => (
               <Block flex style={styles.profileCard}>
-              <Block middle style={styles.avatarContainer}>
-                <Image
-                  source={{ uri: item.image }}
-                  style={styles.avatar}
-                />
-              </Block>
-              
               <Block flex>
                 <Block middle style={styles.nameInfo}>
                   <Text bold size={28} color="#32325D">
-                    {item.fullname}
-                  </Text>
-                  <Text size={16} color="#32325D" style={{ marginTop: 10 }}>
-                    {item.email}
+                    MiRead
                   </Text>
                 </Block>
                 <Block middle style={{ marginTop: 30, marginBottom: 16 }}>
@@ -65,16 +56,6 @@ class Profile extends React.Component {
                 <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
                     <Block center style={styles.aboutContainer}>
                       <Text>{item.about}</Text>
-                    </Block>
-                    <Block center>
-                      <Button color="black" style={styles.button}>
-                        Help Center
-                      </Button>
-                    </Block>
-                    <Block center>
-                      <Button color="error" style={styles.button} onPress={() => navigation.navigate('Login')}>
-                        Logout
-                      </Button>
                     </Block>
                 </Block>
                 </Block>
@@ -104,7 +85,7 @@ const styles = StyleSheet.create({
   },
   profileBackground: {
     width: width,
-    height: height / 2
+    height: height
   },
   profileCard: {
     // position: "relative",
@@ -157,4 +138,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Profile;
+export default AboutUs;

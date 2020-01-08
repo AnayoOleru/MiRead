@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { Block, Text, theme } from "galio-framework";
 
 import Icon from "./Icon";
-import argonTheme from "../constants/Theme";
+import Theme from "../constants/Theme";
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
@@ -16,25 +16,34 @@ class DrawerItem extends React.Component {
             name="shop"
             family="ArgonExtra"
             size={10}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
-      case "Elements":
+      case "Authors":
         return (
           <Icon
             name="map-big"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
+        case "About":
+          return (
+            <Icon
+              name="map-big"
+              family="ArgonExtra"
+              size={12}
+              color={focused ? "white" : Theme.COLORS.ICON}
+            />
+          );
       case "Components":
         return (
           <Icon
             name="map-big"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
       case "Articles":
@@ -43,25 +52,25 @@ class DrawerItem extends React.Component {
             name="spaceship"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
-      case "Library":
+      case "My Library":
         return (
           <Icon
             name="spaceship"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
             />
         );
-      case "Uploads":
+      case "Events":
         return (
             <Icon
               name="spaceship"
               family="ArgonExtra"
               size={12}
-              color={focused ? "white" : argonTheme.COLORS.ICON}
+              color={focused ? "white" : Theme.COLORS.ICON}
               />
           );  
       case "Profile":
@@ -70,7 +79,7 @@ class DrawerItem extends React.Component {
             name="chart-pie-35"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
       case "Account":
@@ -79,7 +88,7 @@ class DrawerItem extends React.Component {
             name="calendar-date"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
       case "Login":
@@ -88,9 +97,27 @@ class DrawerItem extends React.Component {
             name="calendar-date"
             family="ArgonExtra"
             size={12}
-            color={focused ? "white" : argonTheme.COLORS.ICON}
+            color={focused ? "white" : Theme.COLORS.ICON}
           />
         );
+        case "Find Books":
+          return (
+            <Icon
+              name="calendar-date"
+              family="ArgonExtra"
+              size={12}
+              color={focused ? "white" : Theme.COLORS.ICON}
+            />
+          );
+        case "Contact":
+          return (
+            <Icon
+              name="calendar-date"
+              family="ArgonExtra"
+              size={12}
+              color={focused ? "white" : Theme.COLORS.ICON}
+            />
+          );
       case "Getting Started":
         return <Icon />;
       case "Log out":
@@ -133,7 +160,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14
   },
   activeStyle: {
-    backgroundColor: argonTheme.COLORS.ACTIVE,
+    backgroundColor: Theme.COLORS.ACTIVE,
     borderRadius: 4
   },
   shadow: {

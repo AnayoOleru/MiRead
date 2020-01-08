@@ -14,7 +14,7 @@ import { Images, Theme } from "../constants";
 
 const { width, height } = Dimensions.get("screen");
 
-class Register extends React.Component {
+class ContactUS extends React.Component {
   render() {
     const { navigation } = this.props;
     return (
@@ -33,7 +33,7 @@ class Register extends React.Component {
                 
                 <Block flex={0.17} middle>
                   <Text color="#8898AA" size={20}>
-                    Sign up the classic way
+                    Like What you see, don't send me a message through the form below
                   </Text>
                 </Block>
                 <Block flex center>
@@ -86,29 +86,14 @@ class Register extends React.Component {
                       />
                     </Block>
                     <Block width={width * 0.8}>
-                      <Input
-                        password
+                    <Input
                         borderless
-                        placeholder="Password"
+                        placeholder="Message"
                         iconContent={
                           <Icon
                             size={16}
                             color={Theme.COLORS.ICON}
-                            name="padlock-unlocked"
-                            family="ArgonExtra"
-                            style={styles.inputIcons}
-                          />
-                        }
-                      />
-                      <Input
-                        password
-                        borderless
-                        placeholder="Confirm Password"
-                        iconContent={
-                          <Icon
-                            size={16}
-                            color={Theme.COLORS.ICON}
-                            name="padlock-unlocked"
+                            name="hat-3"
                             family="ArgonExtra"
                             style={styles.inputIcons}
                           />
@@ -118,74 +103,23 @@ class Register extends React.Component {
                       <Block row style={styles.passwordCheck}>
                         {/* <Block row style={styles.passwordCheck}> */}
                         <Text size={12} color={Theme.COLORS.MUTED}>
-                          Already Registered?
+                          Instead contact me:
                         </Text>
-                        <Text bold size={12} color={Theme.COLORS.MiREADCOLOR} onPress={() => navigation.navigate("Login")}>
+                        <Text bold size={12} color={Theme.COLORS.MiREADCOLOR}>
                           {" "}
-                          LOGIN
+                          anayo_oleru@outlook.com
                         </Text>
                       {/* </Block> */}
                       </Block>
 
                     </Block>
-                    <Block row width={width * 0.75}>
-                      <Checkbox
-                        checkboxStyle={{
-                          borderWidth: 3
-                        }}
-                        color={Theme.COLORS.PRIMARY}
-                        label="I agree with the"
-                      />
-                      <Button
-                        style={{ width: 100 }}
-                        color="transparent"
-                        textStyle={{
-                          color: Theme.COLORS.PRIMARY,
-                          fontSize: 14
-                        }}
-                      >
-                        Privacy Policy
-                      </Button>
-                    </Block>
                     <Block middle>
                       <Button style={styles.createButton}>
-                        <Text bold size={14} color={Theme.COLORS.WHITE} onPress={() => navigation.navigate("Home")}>
-                          CREATE ACCOUNT
+                        <Text bold size={14} color={Theme.COLORS.WHITE} onPress={() => navigation.navigate("ThankYou")}>
+                          SEND MESSAGE
                         </Text>
                       </Button>
                     </Block>
-
-                    <Block flex={0.25} middle style={styles.socialConnect}>
-                <Text color="#8898AA" size={12}>
-                  Sign up with
-                </Text>
-                <Block row style={{ marginTop: theme.SIZES.BASE }}>
-                  <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
-                    <Block row>
-                      <Icon
-                        name="logo-facebook"
-                        family="Ionicon"
-                        size={14}
-                        color={"black"}
-                        style={{ marginTop: 2, marginRight: 5 }}
-                      />
-                      <Text style={styles.socialTextButtons}>Facebook</Text>
-                    </Block>
-                  </Button>
-                  <Button style={styles.socialButtons}>
-                    <Block row>
-                      <Icon
-                        name="logo-google"
-                        family="Ionicon"
-                        size={14}
-                        color={"black"}
-                        style={{ marginTop: 2, marginRight: 5 }}
-                      />
-                      <Text style={styles.socialTextButtons}>GOOGLE</Text>
-                    </Block>
-                  </Button>
-                </Block>
-              </Block>
                   </KeyboardAvoidingView>
                 </Block>
                 
@@ -256,4 +190,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Register;
+export default ContactUS;

@@ -20,6 +20,14 @@ import Categ from "../screens/Categ";
 import Library from "../screens/Library";
 import Uploads from "../screens/Uploads";
 import Login from "../screens/Login";
+import Recent from "../screens/Recent";
+import Search from "../screens/Search";
+import MyLibrary from "../screens/MyLibrary";
+import FindBooks from '../screens/FindBooks';
+import Events from "../screens/Events";
+import AboutUs from "../screens/AboutUs";
+import ContactUs from "../screens/contactUs";
+import ThankYou from "../screens/ThankYou";
 
 // drawer
 import Menu from "./Menu";
@@ -94,11 +102,41 @@ const CategStack = createStackNavigator({
   transitionConfig
 });
 
-const ArticlesStack = createStackNavigator({
-  Articles: {
-    screen: Articles,
+const FindBooksStack = createStackNavigator({
+  FindBooks: {
+    screen: FindBooks,
     navigationOptions: ({ navigation }) => ({
-      header: <Header title="Articles" navigation={navigation} />
+      header: <Header title="Find Books by Category" navigation={navigation} />
+    })
+  },
+  transitionConfig
+})
+
+const ContactUsStack = createStackNavigator({
+  ContactUs: {
+    screen: ContactUs,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="Contact" navigation={navigation} />
+    })
+  },
+  transitionConfig
+})
+
+const AboutUsStack = createStackNavigator({
+  AboutUs: {
+    screen: AboutUs,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="About" navigation={navigation} />
+    })
+  },
+  transitionConfig
+})
+
+const AccountStack = createStackNavigator({
+  Categ: {
+    screen: Categ,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="Categ" navigation={navigation} />
     })
   }
 },{
@@ -121,6 +159,25 @@ const LibraryStack = createStackNavigator({
   },
   transitionConfig
 });
+
+const EventStack = createStackNavigator({
+  Events: {
+    screen: Events,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="Events" navigation={navigation} />
+    })
+},
+  transitionConfig
+});
+
+const MyLibraryStack = createStackNavigator({
+  MyLibrary: {
+    screen: MyLibrary,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="MyLibrary" navigation={navigation} />
+    })
+  }
+})
 
 const UploadsStack = createStackNavigator({
   Uploads: {
@@ -163,8 +220,31 @@ const HomeStack = createStackNavigator(
         header: <Header search options title="Home" navigation={navigation} />
       })
     },
+
+    Recent: {
+      screen: Recent,
+      navigationOptions: ({ navigation }) => ({
+        header: <Header search options title="Recent" navigation={navigation} />
+      })
+    },
+    
+    Search: {
+      screen: Search,
+      navigationOptions: ({ navigation }) => ({
+        header: <Header search options title="Recent" navigation={navigation} />
+      })
+    },
     Pro: {
       screen: Pro,
+      navigationOptions: ({ navigation }) => ({
+        header: (
+          <Header left={<Block />} white transparent title="" navigation={navigation} />
+        ),
+        headerTransparent: true
+      })
+    },
+    ThankYou: {
+      screen: ThankYou,
       navigationOptions: ({ navigation }) => ({
         header: (
           <Header left={<Block />} white transparent title="" navigation={navigation} />
@@ -197,22 +277,6 @@ const AppStack = createDrawerNavigator(
         )
       })
     },
-    Library: {
-      screen: LibraryStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Library" title="Library" />
-        )
-      })
-    },
-    Uploads: {
-      screen: UploadsStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Uploads" title="Uploads" />
-        )
-      })
-    },
     Profile: {
       screen: ProfileStack,
       navigationOptions: navOpt => ({
@@ -221,11 +285,43 @@ const AppStack = createDrawerNavigator(
         )
       })
     },
-    Account: {
-      screen: Register,
+    MyLibrary: {
+      screen: MyLibraryStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Register" title="Account" />
+          <DrawerItem focused={focused} screen="MyLibrary" title="My Library" />
+        )
+      })
+    },
+    FindBooks: {
+      screen: FindBooksStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Categ" title="Find Books" />
+        )
+      })
+    },
+    Events: {
+      screen: EventStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Events" title="Events" />
+        )
+      })
+    },
+    About: {
+      screen: AboutUsStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="AboutUs" title="About" />
+        )
+      })
+    },
+    Contact: {
+      screen: ContactUsStack,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="ContactUs" title="Contact" />
         )
       })
     },
@@ -237,30 +333,14 @@ const AppStack = createDrawerNavigator(
         )
       })
     },
-    Elements: {
-      screen: ElementsStack,
+    Account: {
+      screen: Register,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Elements" title="Elements" />
+          <DrawerItem focused={focused} screen="Register" title="Account" />
         )
       })
     },
-    Categ: {
-      screen: CategStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Categ" title="Categ" />
-        )
-      })
-    },
-    Articles: {
-      screen: ArticlesStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Articles" title="Articles" />
-        )
-      })
-    }
   },
   Menu
 );
